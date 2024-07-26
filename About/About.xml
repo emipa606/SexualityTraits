@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>Sexuality Traits (Continued)</name>
+  <packageId>Mlie.SexualityTraits</packageId>
+  <author>Scotty, Taranchuk, Delran</author>
+  <url>https://github.com/emipa606/SexualityTraits</url>
+  <supportedVersions>
+    <li>1.3</li>
+    <li>1.4</li>
+    <li>1.5</li>
+  </supportedVersions>
+  <modDependencies />
+  <loadAfter />
+  <description>[img]https://i.imgur.com/buuPQel.png[/img]
+Update of Scotty, Taranchuk, Delrans mod https://steamcommunity.com/sharedfiles/filedetails/?id=2589673154
+
+[img]https://i.imgur.com/pufA0kM.png[/img]
+
+[table]
+    [tr][td][url=https://dsc.gg/mlie][img]https://i.imgur.com/zdzzBrc.png[/img][/url][/td] [td][url=https://github.com/emipa606/SexualityTraits][img]https://i.imgur.com/kTkpTOE.png[/img][/url][/td]
+    [/tr]
+    [tr]
+        [td][img]https://i.imgur.com/WjDSfUn.png[/img][/td]
+        [td][img]https://i.imgur.com/Be8E2qJ.png[/img][/td]
+    [/tr]
+[/table]
+	
+[img]https://i.imgur.com/Z4GOv8H.png[/img]
+Sexuality Traits is a mod aimed at player control for sexuality assignment and adding a straight trait
+
+This mod features: 
+
+-A straight trait for heterosexual pawns
+-An additional trait slot used only for sexuality assignment (works with mods which add more trait slots)
+-A settings screen which allows the user to change what percentage of pawns generate with each sexuality. By default these settings are as follows: 50% Bisexual ; 20% Gay ; 20% Straight ; 10% Asexual. Of course if users want to change this, they are able to.
+-Settings to disable romance attempts between pawns who aren't allowed to date one another.
+
+In case of any feedback or bug reports, please utilise the comment section of the mod on the Steam workshop.
+
+Possible issues:
+-Immersion breaking when using altered carbon, this likely cannot be fixed without extensive coding and memory for a pawns prior body's gender kept in the game. However this is already a base issue with altered carbon and the vanilla traits. 
+
+Fitz - Possible crashing with all DLCS installed. 
+
+Known errors:
+-none, currently!
+
+All coding done by the wonderful Taranchuk from the Rimworld Mod Market.
+
+[url=https://discord.gg/7befJWr9xS][img]https://i.imgur.com/cfoFEMA.png[/img][/url]
+
+[img]https://i.imgur.com/PwoNOj4.png[/img]
+[list]
+[*] See if the the error persists if you just have this mod and its requirements active.
+[*] If not, try adding your other mods until it happens again.
+[*] Post your error-log using [url=https://steamcommunity.com/workshop/filedetails/?id=818773962]HugsLib[/url] or the standalone [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2873415404]Uploader[/url] and command Ctrl+F12
+[*] For best support, please use the Discord-channel for error-reporting.
+[*] Do not report errors by making a discussion-thread, I get no notification of that.
+[*] If you have the solution for a problem, please post it to the GitHub repository.
+[*] Use [url=https://github.com/RimSort/RimSort/releases/latest]RimSort[/url] to sort your mods
+[/list]</description>
+  <modVersion IgnoreIfNoMatchingField="True">1.5.0</modVersion>
+</ModMetaData>
