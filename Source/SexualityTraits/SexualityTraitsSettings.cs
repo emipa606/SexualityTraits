@@ -13,9 +13,9 @@ internal class SexualityTraitsSettings : ModSettings
 
     private float gayCommonality = 0.2f;
 
-    public bool romanceTweaksEnabled = true;
+    public bool RomanceTweaksEnabled = true;
 
-    public List<TraitDef> sexualityTraits;
+    public List<TraitDef> SexualityTraits;
     private float straightCommonality = 0.2f;
 
     public override void ExposeData()
@@ -25,7 +25,7 @@ internal class SexualityTraitsSettings : ModSettings
         Scribe_Values.Look(ref gayCommonality, "gayCommonality", 0.2f);
         Scribe_Values.Look(ref bisexualCommonality, "bisexualCommonality", 0.5f);
         Scribe_Values.Look(ref asexualCommonality, "asexualCommonality", 0.1f);
-        Scribe_Values.Look(ref romanceTweaksEnabled, "romanceTweaksEnabled", true);
+        Scribe_Values.Look(ref RomanceTweaksEnabled, "romanceTweaksEnabled", true);
     }
 
     public float GetCommonalityFor(TraitDef traitDef)
@@ -43,74 +43,74 @@ internal class SexualityTraitsSettings : ModSettings
     public void DoSettingsWindowContents(Rect inRect)
     {
         var rect = new Rect(inRect.x, inRect.y, inRect.width, inRect.height);
-        var listing_Standard = new Listing_Standard();
-        listing_Standard.Begin(rect);
-        listing_Standard.SliderLabeled("ST.StraightCommonality".Translate(), ref straightCommonality,
+        var listingStandard = new Listing_Standard();
+        listingStandard.Begin(rect);
+        listingStandard.SliderLabeled("ST.StraightCommonality".Translate(), ref straightCommonality,
             straightCommonality.ToStringPercent());
         var num = 1E-05f;
         while (straightCommonality + gayCommonality + bisexualCommonality + asexualCommonality > 1f)
         {
-            TryModify(ref gayCommonality, 0f - num);
-            TryModify(ref bisexualCommonality, 0f - num);
-            TryModify(ref asexualCommonality, 0f - num);
+            tryModify(ref gayCommonality, 0f - num);
+            tryModify(ref bisexualCommonality, 0f - num);
+            tryModify(ref asexualCommonality, 0f - num);
         }
 
         while (straightCommonality + gayCommonality + bisexualCommonality + asexualCommonality < 1f)
         {
-            TryModify(ref gayCommonality, num);
-            TryModify(ref bisexualCommonality, num);
-            TryModify(ref asexualCommonality, num);
+            tryModify(ref gayCommonality, num);
+            tryModify(ref bisexualCommonality, num);
+            tryModify(ref asexualCommonality, num);
         }
 
-        listing_Standard.SliderLabeled("ST.GayCommonality".Translate(), ref gayCommonality,
+        listingStandard.SliderLabeled("ST.GayCommonality".Translate(), ref gayCommonality,
             gayCommonality.ToStringPercent());
         while (straightCommonality + gayCommonality + bisexualCommonality + asexualCommonality > 1f)
         {
-            TryModify(ref straightCommonality, 0f - num);
-            TryModify(ref bisexualCommonality, 0f - num);
-            TryModify(ref asexualCommonality, 0f - num);
+            tryModify(ref straightCommonality, 0f - num);
+            tryModify(ref bisexualCommonality, 0f - num);
+            tryModify(ref asexualCommonality, 0f - num);
         }
 
         while (straightCommonality + gayCommonality + bisexualCommonality + asexualCommonality < 1f)
         {
-            TryModify(ref straightCommonality, num);
-            TryModify(ref bisexualCommonality, num);
-            TryModify(ref asexualCommonality, num);
+            tryModify(ref straightCommonality, num);
+            tryModify(ref bisexualCommonality, num);
+            tryModify(ref asexualCommonality, num);
         }
 
-        listing_Standard.SliderLabeled("ST.BisexualCommonality".Translate(), ref bisexualCommonality,
+        listingStandard.SliderLabeled("ST.BisexualCommonality".Translate(), ref bisexualCommonality,
             bisexualCommonality.ToStringPercent());
         while (straightCommonality + gayCommonality + bisexualCommonality + asexualCommonality > 1f)
         {
-            TryModify(ref straightCommonality, 0f - num);
-            TryModify(ref gayCommonality, 0f - num);
-            TryModify(ref asexualCommonality, 0f - num);
+            tryModify(ref straightCommonality, 0f - num);
+            tryModify(ref gayCommonality, 0f - num);
+            tryModify(ref asexualCommonality, 0f - num);
         }
 
         while (straightCommonality + gayCommonality + bisexualCommonality + asexualCommonality < 1f)
         {
-            TryModify(ref straightCommonality, num);
-            TryModify(ref gayCommonality, num);
-            TryModify(ref asexualCommonality, num);
+            tryModify(ref straightCommonality, num);
+            tryModify(ref gayCommonality, num);
+            tryModify(ref asexualCommonality, num);
         }
 
-        listing_Standard.SliderLabeled("ST.AsexualCommonality".Translate(), ref asexualCommonality,
+        listingStandard.SliderLabeled("ST.AsexualCommonality".Translate(), ref asexualCommonality,
             asexualCommonality.ToStringPercent());
         while (straightCommonality + gayCommonality + bisexualCommonality + asexualCommonality > 1f)
         {
-            TryModify(ref straightCommonality, 0f - num);
-            TryModify(ref gayCommonality, 0f - num);
-            TryModify(ref bisexualCommonality, 0f - num);
+            tryModify(ref straightCommonality, 0f - num);
+            tryModify(ref gayCommonality, 0f - num);
+            tryModify(ref bisexualCommonality, 0f - num);
         }
 
         while (straightCommonality + gayCommonality + bisexualCommonality + asexualCommonality < 1f)
         {
-            TryModify(ref straightCommonality, num);
-            TryModify(ref gayCommonality, num);
-            TryModify(ref bisexualCommonality, num);
+            tryModify(ref straightCommonality, num);
+            tryModify(ref gayCommonality, num);
+            tryModify(ref bisexualCommonality, num);
         }
 
-        if (listing_Standard.ButtonText("Reset".Translate()))
+        if (listingStandard.ButtonText("Reset".Translate()))
         {
             straightCommonality = 0.2f;
             gayCommonality = 0.2f;
@@ -118,22 +118,22 @@ internal class SexualityTraitsSettings : ModSettings
             asexualCommonality = 0.1f;
         }
 
-        listing_Standard.CheckboxLabeled("ST.EnableRomanceTweaks".Translate(), ref romanceTweaksEnabled,
+        listingStandard.CheckboxLabeled("ST.EnableRomanceTweaks".Translate(), ref RomanceTweaksEnabled,
             "ST.EnableRomanceTweaksTooltip".Translate());
 
         if (SexualityTraitsMod.CurrentVersion != null)
         {
-            listing_Standard.Gap();
+            listingStandard.Gap();
             GUI.contentColor = Color.gray;
-            listing_Standard.Label("ST.CurrentModVersion".Translate(SexualityTraitsMod.CurrentVersion));
+            listingStandard.Label("ST.CurrentModVersion".Translate(SexualityTraitsMod.CurrentVersion));
             GUI.contentColor = Color.white;
         }
 
-        listing_Standard.End();
+        listingStandard.End();
         Write();
     }
 
-    private void TryModify(ref float field, float value)
+    private static void tryModify(ref float field, float value)
     {
         if (value > 0f)
         {

@@ -1,3 +1,4 @@
+using System.Reflection;
 using HarmonyLib;
 using RimWorld;
 using Verse;
@@ -9,8 +10,8 @@ internal static class HarmonyInit
 {
     static HarmonyInit()
     {
-        new Harmony("SexualityTraits.Mod").PatchAll();
-        SexualityTraitsMod.settings.sexualityTraits =
+        new Harmony("SexualityTraits.Mod").PatchAll(Assembly.GetExecutingAssembly());
+        SexualityTraitsMod.Settings.SexualityTraits =
         [
             ST_DefOf.ST_Straight,
             TraitDefOf.Gay,

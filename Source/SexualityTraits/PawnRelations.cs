@@ -23,7 +23,7 @@ public static class PawnRelations
         }
 
         var array = new Pawn[10];
-        PawnGenerator_GenerateTraits.ignoreThis = true;
+        PawnGenerator_GenerateTraits.IgnoreThis = true;
         for (var i = 0; i < 10; i++)
         {
             var kindDef = pawn.kindDef;
@@ -34,8 +34,8 @@ public static class PawnRelations
                 true, false, false, false, false, 0f, 0f, null, 1f, null, null, null, null, null, null, null, gender));
         }
 
-        PawnGenerator_GenerateTraits.ignoreThis = false;
-        var source = GenerateSamples(array, relationsGeneratableNonblood, 40);
+        PawnGenerator_GenerateTraits.IgnoreThis = false;
+        var source = generateSamples(array, relationsGeneratableNonblood, 40);
         if (!source.TryRandomElementByWeight(
                 x => x.Second.generationChanceFactor * x.Second.Worker.GenerationChance(pawn, x.First, localReq),
                 out var result) || result.First == null)
@@ -54,7 +54,7 @@ public static class PawnRelations
         result.First.relations.everSeenByPlayer = true;
     }
 
-    private static Pair<Pawn, PawnRelationDef>[] GenerateSamples(Pawn[] pawns, PawnRelationDef[] relations, int count)
+    private static Pair<Pawn, PawnRelationDef>[] generateSamples(Pawn[] pawns, PawnRelationDef[] relations, int count)
     {
         var array = new Pair<Pawn, PawnRelationDef>[count];
         for (var i = 0; i < count; i++)

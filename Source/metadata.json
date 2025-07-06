@@ -3,7 +3,13 @@
   "CanAdd": "0",
   "CanRemove": "2",
   "SocialImageSet": true,
-  "PreviewVersion": "1.5",
-  "LastXmlCleaning": "2025-05-20T19:19:37.3556182+02:00",
-  "SearchTags": " assignment"
+  "PreviewVersion": "1.6",
+  "LastXmlCleaning": "2025-07-06T20:15:28.3435344+02:00",
+  "SearchTags": " assignment",
+  "Patches": false,
+  "Defs": true,
+  "Assemblies": true,
+  "LinesOfCode": 16885,
+  "LinesOfXML": 457,
+  "CodeBaseSize": 67
 }

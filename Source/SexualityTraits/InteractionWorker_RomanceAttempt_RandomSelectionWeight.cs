@@ -10,48 +10,33 @@ public static class InteractionWorker_RomanceAttempt_RandomSelectionWeight
     [HarmonyPriority(0)]
     public static void Postfix(Pawn initiator, Pawn recipient, ref float __result)
     {
-        if (!SexualityTraitsMod.settings.romanceTweaksEnabled)
+        if (!SexualityTraitsMod.Settings.RomanceTweaksEnabled)
         {
             return;
         }
 
-        if (initiator.HasTrait(TraitDefOf.Gay) && (initiator.gender != recipient.gender ||
-                                                   !recipient.HasTrait(TraitDefOf.Bisexual) &&
-                                                   !recipient.HasTrait(TraitDefOf.Gay)))
-        {
-            __result = 0f;
-            return;
-        }
-
-        if (recipient.HasTrait(TraitDefOf.Gay) && (initiator.gender != recipient.gender ||
-                                                   !initiator.HasTrait(TraitDefOf.Bisexual) &&
-                                                   !initiator.HasTrait(TraitDefOf.Gay)))
+        if (initiator.hasTrait(TraitDefOf.Gay) && (initiator.gender != recipient.gender ||
+                                                   !recipient.hasTrait(TraitDefOf.Bisexual) &&
+                                                   !recipient.hasTrait(TraitDefOf.Gay)) ||
+            recipient.hasTrait(TraitDefOf.Gay) && (initiator.gender != recipient.gender ||
+                                                   !initiator.hasTrait(TraitDefOf.Bisexual) &&
+                                                   !initiator.hasTrait(TraitDefOf.Gay)) ||
+            initiator.hasTrait(TraitDefOf.Bisexual) && initiator.gender != recipient.gender &&
+            recipient.hasTrait(TraitDefOf.Gay) || initiator.hasTrait(TraitDefOf.Asexual) ||
+            recipient.hasTrait(TraitDefOf.Asexual))
         {
             __result = 0f;
             return;
         }
 
-        if (initiator.HasTrait(TraitDefOf.Bisexual) && initiator.gender != recipient.gender &&
-            recipient.HasTrait(TraitDefOf.Gay))
-        {
-            __result = 0f;
-            return;
-        }
-
-        if (initiator.HasTrait(TraitDefOf.Asexual) || recipient.HasTrait(TraitDefOf.Asexual))
-        {
-            __result = 0f;
-            return;
-        }
-
-        if ((initiator.HasTrait(ST_DefOf.ST_Straight) || recipient.HasTrait(ST_DefOf.ST_Straight)) &&
+        if ((initiator.hasTrait(ST_DefOf.ST_Straight) || recipient.hasTrait(ST_DefOf.ST_Straight)) &&
             recipient.gender == initiator.gender)
         {
             __result = 0f;
         }
     }
 
-    public static bool HasTrait(this Pawn pawn, TraitDef traitDef)
+    private static bool hasTrait(this Pawn pawn, TraitDef traitDef)
     {
         return traitDef != null && (pawn?.story?.traits?.HasTrait(traitDef)).GetValueOrDefault();
     }

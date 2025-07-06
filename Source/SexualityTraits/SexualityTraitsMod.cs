@@ -6,20 +6,20 @@ namespace SexualityTraits;
 
 internal class SexualityTraitsMod : Mod
 {
-    public static SexualityTraitsSettings settings;
+    public static SexualityTraitsSettings Settings;
     public static string CurrentVersion;
 
     public SexualityTraitsMod(ModContentPack pack)
         : base(pack)
     {
         CurrentVersion = VersionFromManifest.GetVersionFromModMetaData(pack.ModMetaData);
-        settings = GetSettings<SexualityTraitsSettings>();
+        Settings = GetSettings<SexualityTraitsSettings>();
     }
 
     public override void DoSettingsWindowContents(Rect inRect)
     {
         base.DoSettingsWindowContents(inRect);
-        settings.DoSettingsWindowContents(inRect);
+        Settings.DoSettingsWindowContents(inRect);
     }
 
     public override string SettingsCategory()

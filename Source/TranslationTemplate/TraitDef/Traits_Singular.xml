@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: straight -->
+  <ST_Straight.degreeDatas.straight.label>straight</ST_Straight.degreeDatas.straight.label>
+  <!-- EN: {PAWN_nameDef} is romantically attracted to people of {PAWN_possessive} opposite gender. -->
+  <ST_Straight.degreeDatas.straight.description>{PAWN_nameDef} is romantically attracted to people of {PAWN_possessive} opposite gender.</ST_Straight.degreeDatas.straight.description>
+</LanguageData>
