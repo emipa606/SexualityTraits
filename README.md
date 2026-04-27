@@ -1,12 +1,12 @@
 # [Sexuality Traits (Continued)](https://steamcommunity.com/sharedfiles/filedetails/?id=3297325000)
 
-![Image](https://i.imgur.com/buuPQel.png)
+![Image](https://img.litet.net/logos/Info.png)
 
 Update of Scotty, Taranchuk, Delrans mod https://steamcommunity.com/sharedfiles/filedetails/?id=2589673154
 
-![Image](https://i.imgur.com/pufA0kM.png)
+![Image](https://img.litet.net/logos/Notice.png)
 	
-![Image](https://i.imgur.com/Z4GOv8H.png)
+![Image](https://img.litet.net/logos/OriginalDescription.png)
 
 Sexuality Traits is a mod aimed at player control for sexuality assignment and adding a straight trait
 
@@ -29,15 +29,15 @@ Known errors:
 
 All coding done by the wonderful Taranchuk from the Rimworld Mod Market.
 
-[![Image](https://i.imgur.com/cfoFEMA.png)](https://discord.gg/7befJWr9xS)
+[![Image](https://img.litet.net/cfoFEMA.png)](https://discord.gg/7befJWr9xS)
 
-![Image](https://i.imgur.com/PwoNOj4.png)
+![Image](https://img.litet.net/logos/ReportingIssues.png)
 
 
 
 -  See if the the error persists if you just have this mod and its requirements active.
 -  If not, try adding your other mods until it happens again.
--  Post your error-log using [HugsLib](https://steamcommunity.com/workshop/filedetails/?id=818773962) or the standalone [Uploader](https://steamcommunity.com/sharedfiles/filedetails/?id=2873415404) and command Ctrl+F12
+-  Always post your log using the [Log Uploader](https://steamcommunity.com/sharedfiles/filedetails/?id=2873415404)
 -  For best support, please use the Discord-channel for error-reporting.
 -  Do not report errors by making a discussion-thread, I get no notification of that.
 -  If you have the solution for a problem, please post it to the GitHub repository.
@@ -45,4 +45,4 @@ All coding done by the wonderful Taranchuk from the Rimworld Mod Market.
 
  
 
-[![Image](https://img.shields.io/github/v/release/emipa606/SexualityTraits?label=latest%20version&style=plastic&color=9f1111&labelColor=black)](https://steamcommunity.com/sharedfiles/filedetails/changelog/3297325000) | tags:  assignment
+[![Image](https://img.shields.io/github/v/release/emipa606/SexualityTraits?label=latest%20version&style=plastic&color=9f1111&labelColor=black)](https://steamcommunity.com/sharedfiles/filedetails/changelog/3297325000) | tags: assignment
